@@ -1,8 +1,9 @@
 const app = require("./app");
 
-// ℹ️ Sets the PORT for our app to have access to it. If no env has been set, we hard code it to 5005
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 8080; // Cambiar a 8080 si Fly.io te proporciona este puerto
+const HOST = '0.0.0.0';
 
-app.listen(PORT, '0.0.0.0', () => {
-  console.log(`El servidor está escuchando en http://0.0.0.0:${PORT}`);
+app.listen(PORT, HOST, () => {
+  console.log(`Server listening on http://${HOST}:${PORT}`);
 });
+
